@@ -46,6 +46,39 @@ public class Job {
         return java.util.Objects.hash(super.hashCode(), id);
     }
 
+    public String toString() {
+        String message = "\nID: " + this.id + "\n";
+        String empty= "Data not available.";
+
+        if (this.name.isEmpty()) {
+            message += "Name: " + empty + "\n";
+        } else {
+            message += "Name: " + this.name + "\n";
+        }
+        if (this.employer.getValue().isEmpty()){
+            message += "Employer: " + empty + "\n";
+        } else {
+            message += "Employer: " + this.employer + "\n";
+        }
+        if (this.location.getValue().isEmpty()) {
+            message += "Location: " + empty + "\n";
+        } else {
+            message += "Location: " + this.location + "\n";
+        }
+        if (this.positionType.getValue().isEmpty()) {
+            message += "Position Type: " + empty + "\n";
+        } else {
+            message += "Position Type: " + this.positionType + "\n";
+        }
+        if (this.coreCompetency.getValue().isEmpty()) {
+            message += "Core Competency: " + empty + "\n";
+        } else {
+            message += "Core Competency: " + this.coreCompetency + "\n";
+        }
+
+        return message;
+        //return "\nName: " + this.name + "\nEmployer: " +this.employer + "\nLocation: " + this.location +"\nPosition Type: " + this.positionType +"\nCore Competency: " + this.coreCompetency +"\n";
+    }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
