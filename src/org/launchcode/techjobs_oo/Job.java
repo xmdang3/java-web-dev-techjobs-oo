@@ -32,7 +32,7 @@ public class Job {
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
-    @OverRide
+    @Override
     public boolean equals(Object object) {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
@@ -41,7 +41,7 @@ public class Job {
         return id == job.id;
     }
 
-    @OverRide
+    @Override
     public int hashCode() {
         return java.util.Objects.hash(super.hashCode(), id);
     }
@@ -89,5 +89,9 @@ public class Job {
 
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
+    }
+
+    public int getId() {
+        return id;
     }
 }
